@@ -28,3 +28,14 @@ function obtenerPromedio(numeros) {
 
   return (acumulador / numeros.length).toFixed(2);
 }
+
+//Funcion nueva para la tarea 2.
+function salarioMensualPromedio(numeros) {
+  let acumulador = 0;
+  let mesesEnElAnio = 12;
+  for (let i = 0; i < numeros.length; i++) {
+    acumulador += numeros[i];
+  }
+
+  return (acumulador / numeros.length / mesesEnElAnio).toFixed(2);
+}

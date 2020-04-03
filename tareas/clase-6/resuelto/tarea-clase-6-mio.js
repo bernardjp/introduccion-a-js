@@ -15,7 +15,8 @@ document.querySelector('#siguiente-paso').onclick = function(event) {
   borrarIntegrantesAnteriores();
   crearIntegrantes(cantidadIntegrantes);
 
-  event.preventDefault();
+  event.preventDefault(); //evita que la accion default se inicie. En este caso al submitear el form evita que se
+                          //envie y por ende, recargue la pagina.
 };
 
 document.querySelector('#calcular').onclick = function(event) {
@@ -30,8 +31,15 @@ document.querySelector('#calcular').onclick = function(event) {
 
 document.querySelector('#resetear').onclick = resetear;
 
+/*
+document.querySelector('#añadir-salario').onclick = function() {
+  mostrarInputSalario();
+
+  event.preventDefault();
+}
+*/
 function borrarIntegrantesAnteriores() {
-  const $integrantes = document.querySelectorAll('.integrante');
+  const $integrantes = document.querySelectorAll('.integrante');// selecciona todos los nodos con esta class. Devuelve un NodeList.
   for (let i = 0; i < $integrantes.length; i++) {
     $integrantes[i].remove();
   }
@@ -55,23 +63,61 @@ function crearIntegrante(indice) {
   $div.className = 'integrante';
 
   const $label = document.createElement('label');
-  $label.textContent = 'Edad del integrante #: ' + (indice + 1);
+  $label.textContent = 'Edad del integrante #: ' + (indice + 1) + ' ';
   const $input = document.createElement('input');
   $input.type = 'number';
-
+  /*const $button = document.createElement('button');
+  $button.id = 'añadir-salario';
+  $button.textContent = 'Salario'
+  const $inputSalario = document.createElement('input');
+  $inputSalario.type = 'number';
+  $inputSalario.id = 'salario';
+  $inputSalario.className = 'oculto';*/
+  
   $div.appendChild($label);
   $div.appendChild($input);
+  //$div.appendChild($button);
+  //$div.appendChild($inputSalario);
 
-  const $integrantes = document.querySelector('#integrantes');
-  $integrantes.appendChild($div);
-}
+/*<div>
+    <label>Edad del integrante #: (indice + 1)<label/>
+    <input type:"number"/>
+  <div/>*/
+
+//  const $integrantes = document.querySelector('#integrantes');
+  //$integrantes.appendChild($div);
+
+/*<div id="integrantes">
+    <div>
+        <label>Edad del integrante #: (indice + 1)<label/>
+        <input type:"number"/>
+    <div/>*/
+
+  //document.querySelector('#añadir-salario').onclick = function() {
+    //mostrarInputSalario();
+    
+    event.preventDefault();
+  }
+
 
 function resetear() {
   borrarIntegrantesAnteriores();
   ocultarBotonCalculo();
   ocultarResultados();
+  //ocultarInputSalario();
 }
 
+/*nuevo input para el salario
+function ocultarInputSalario(){
+  document.querySelector('#salario').classname = 'oculto';
+}
+
+function mostrarInputSalario(){
+  document.querySelector('#salario').classname = '';
+}
+*/
+//--------------------------
+/*
 function ocultarBotonCalculo() {
   document.querySelector('#calcular').className = 'oculto';
 }
@@ -79,7 +125,7 @@ function ocultarBotonCalculo() {
 function mostrarBotonCalculo() {
   document.querySelector('#calcular').className = '';
 }
-
+*/
 function ocultarResultados() {
   document.querySelector('#analisis').className = 'oculto';
 }
@@ -93,7 +139,7 @@ function mostrarEdad(tipo, valor) {
 }
 
 function obtenerEdadesIntegrantes() {
-  const $integrantes = document.querySelectorAll('.integrante input');
+  const $integrantes = document.querySelectorAll('.integrante input');//devuelve el NodeList con todos los inputs de la clase
   const edades = [];
   for (let i = 0; i < $integrantes.length; i++) {
     edades.push(Number($integrantes[i].value));
@@ -103,8 +149,13 @@ function obtenerEdadesIntegrantes() {
 
 /*
 TAREA:
-Crear una interfaz que permita agregar ó quitar (botones agregar y quitar) inputs+labels para completar el salario anual de cada integrante de la familia que trabaje.
-Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor salario anual, menor salario anual, salario anual promedio y salario mensual promedio.
+Crear una interfaz que permita agregar ó quitar (botones agregar y quitar) inputs+labels para completar el
+salario anual de cada integrante de la familia que trabaje.
+Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor salario anual, menor salario anual,
+salario anual promedio y salario mensual promedio.
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
 */
+
+
+
