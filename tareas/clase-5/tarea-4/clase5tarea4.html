@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 5 - Tarea 4</title>
+</head>
+<body>
+    <header>
+        <h1>r/Argentina Programa.</h1>
+        <h2>Duración de videos del canal de Youtube.</h2>
+    </header>
+
+    <main>
+        <div>
+            <form id="ingreso-datos" onsubmit="return false">
+                <label>Clase:
+                    <input type="number" id="numero-clase" />
+                </label>
+                <label>Horas:
+                    <input type="number" id="duracion-horas" />
+                </label>
+                <label>Minutos:
+                    <input type="number" id="duracion-minutos" />
+                </label>
+                <label>Segundos:
+                    <input type="number" id="duracion-segundos" />
+                </label>
+                <button id="ingresar-datos-video">Ingresar</button>
+                <button id="limpiar-datos-video" type="reset">Limpiar</button>
+            </form>
+        </div>
+        <div id="listado-clases">
+            <div id="contador-clase">
+                <input type="text" placeholder="Número de clase" id="clase-id" disabled/>
+                <input type="text" placeholder="Duración de la clase" id="duracion-total-clase" disabled/>
+                <button id="eliminar-entrada">Eliminar</button>
+            </div>
+        </div>
+        <div>
+            <input type="text" placeholder="Número total de clases" id="clases-totales" disabled/>
+            <input type="text" placeholder="Duración total del curso" id="duracion-total-curso" disabled/>
+            <button id="calcular-total">Calcular</button>
+            <button id="limpiar-total" type="reset">Limpiar</button>
+        </div>
+
+    </main>
+    <script type="text/javascript" src="clase5tarea4.js"></script>
+</body>
+</html>
