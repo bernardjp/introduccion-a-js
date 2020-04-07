@@ -1,0 +1,25 @@
+.oculto {
+    display: none;
+}
+
+.integrante {
+    margin-bottom: 5px;
+}
+
+.error {
+    border: 2px solid red;  
+}
+
+.mensaje-error {
+    color: red;
+    margin-left: 10px;
+}
+
+.boton-remover {
+    margin-left: 5px;
+}
+
+#agregar-integrante {
+    margin-bottom: 15px;
+}
+
