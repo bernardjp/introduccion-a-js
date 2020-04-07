@@ -6,11 +6,10 @@ Al hacer click en "calcular", mostrar en un elemento pre-existente el mayor sala
 salario anual promedio y salario mensual promedio.
 
 Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como 0).
-*/
 
-//evento click = crear label, input number, boton quitar
+evento click = crear label, input number, boton quitar
 
-/*ELEMENTOS A VALIDAR: 
+ELEMENTOS A VALIDAR: 
 1- Cantidad de intergrantes añadidos? El usuario no ingresa ningun input.
 2- Salarios ingresados:
     a- Solo numeros.
@@ -112,10 +111,7 @@ document.querySelector('#agregar-integrante').onclick = function(event){
     event.preventDefault();
 }
 
-//Este evento se debe incoporar al validarFormulario
-
 document.querySelector('#calcular').onclick = validarFormulario;
-
 
 document.querySelector('#resetear').onclick = function(event){
     resetear();

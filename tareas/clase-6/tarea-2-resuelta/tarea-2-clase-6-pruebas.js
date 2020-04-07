@@ -1,3 +1,4 @@
+
 function probraValidarSalario() {
     console.assert(
         validarSalario('asdasdaa') === 'Este campo solamente acepta números.',
