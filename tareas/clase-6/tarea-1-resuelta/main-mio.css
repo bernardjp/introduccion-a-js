@@ -1,3 +1,11 @@
 .oculto {
     display: none;
 }
+
+.input-error {
+    border:  2px solid red;
+}
+
+.mensaje-error {
+    color: red;
+}
