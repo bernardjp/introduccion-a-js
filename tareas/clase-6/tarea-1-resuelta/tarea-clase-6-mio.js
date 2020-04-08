@@ -8,15 +8,70 @@ Punto bonus: Crear un botón para "empezar de nuevo" que empiece el proceso nuev
  borrando los inputs ya creados (investigar cómo en MDN).
 */
 
-document.querySelector('#siguiente-paso').onclick = function(event) {
+
+document.querySelector('#siguiente-paso').onclick = validarFormIntegrante;
+
+function validarFormIntegrante(event) {
   const $cantidadIntegrantes = document.querySelector('#cantidad-integrantes');
-  const cantidadIntegrantes = Number($cantidadIntegrantes.value);
+  const cantidadIntegrantes = $cantidadIntegrantes.value;
+  const errores = validarIntegrantes(cantidadIntegrantes);
 
-  borrarIntegrantesAnteriores();
-  crearIntegrantes(cantidadIntegrantes);
-
+  const esExito = manejarErrores(errores) === 0;
+  
+  if (esExito){
+    borrarIntegrantesAnteriores();
+    crearIntegrantes(cantidadIntegrantes);
+  }
+ 
   event.preventDefault();
 };
+
+function validarIntegrantes(cantidad){
+  if (cantidad === ''){
+    return '';
+  }
+
+  if (/^[0-9]+$/.test(cantidad) === false){
+    return 'Este campo sola aceptan números enteros.';
+  }
+
+  if (cantidad <= 0){
+    return 'Este campo sola acepta valores superiores a 0 (cero).';
+  }
+
+  if (cantidad >= 25){
+    return 'Solamente se aceptan hasta 25 (veinticinco) integrantes.';
+  }
+
+  return '';
+}
+
+function manejarErrores(errores){
+  let cantidadErrores = 0;
+
+  if (errores){
+    cantidadErrores++;
+    const $inputIntegrante = document.getElementById('input-integrantes');
+    document.getElementById('cantidad-integrantes').className = 'input-error';
+
+    if (document.querySelector('.mensaje-error')){
+      document.querySelector('.mensaje-error').remove();
+    }
+
+    const $mensajeError = document.createElement('label');      
+      $mensajeError.className = 'mensaje-error';
+      $mensajeError.innerText = `${errores}`;
+    $inputIntegrante.appendChild($mensajeError);
+  } else {
+    document.getElementById('cantidad-integrantes').className = '';
+
+    if (document.querySelector('.mensaje-error')){
+      document.querySelector('.mensaje-error').remove();
+    }
+  }
+
+  return cantidadErrores;
+}
 
 document.querySelector('#calcular').onclick = function(event) {
   const numeros = obtenerEdadesIntegrantes();
