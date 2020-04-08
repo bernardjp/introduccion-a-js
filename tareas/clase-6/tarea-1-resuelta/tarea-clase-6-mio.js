@@ -35,10 +35,6 @@ function validarIntegrantes(cantidad){
     return 'Este campo sola aceptan números enteros.';
   }
 
-  if (cantidad <= 0){
-    return 'Este campo sola acepta valores superiores a 0 (cero).';
-  }
-
   if (cantidad >= 25){
     return 'Solamente se aceptan hasta 25 (veinticinco) integrantes.';
   }
