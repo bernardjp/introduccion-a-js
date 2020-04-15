@@ -7,7 +7,23 @@
     <title>Simón dice!</title>
 </head>
 <body>
-    <h1>Juguemos al Simón dice!</h1>
+    <div id="game-menu-block" class="">
+        <label style="font-size: 20px;">Press the button to start the game!</label>
+        <button id="btn-start">START</button>
+    </div>
+
+    <div id="game-btn-block" class="">
+        <button id="btn-red" class="game-btn">RED</button>
+        <button id="btn-yellow" class="game-btn">YELLOW</button>
+        <button id="btn-green" class="game-btn">GREEN</button>
+        <button id="btn-blue" class="game-btn">BLUE</button>
+    </div>
+
+    <div id="game-result" class="hidden">
+        <h2 id="game-result-msg">Your final score is:</h2>
+        <h1 id="game-result-score">SCORE</h1>
+        <button id="btn-reset">PLAY AGAIN</button>
+    </div>
 
     <script src="main.js"></script>
 </body>

@@ -1,0 +1,56 @@
+#game-menu-block {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+#game-btn-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+    height: 80%;
+    justify-content: center;
+}
+
+.game-btn {
+    width: 45%;
+    height: 40vh;
+    margin: 8px;
+}
+
+#btn-red {
+    background-color: rgb(243, 151, 151);
+}
+
+#btn-yellow {
+    background-color: rgb(228, 226, 131);
+}
+
+#btn-green {
+    background-color: rgb(161, 247, 144);
+}
+
+#btn-blue {
+    background-color: rgb(131, 138, 228);
+}
+
+
+#game-result {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btn-reset {
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
