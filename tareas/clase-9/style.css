@@ -18,24 +18,28 @@
     width: 45%;
     height: 40vh;
     margin: 8px;
+    border-radius: 16px;
+    opacity: 0.5;
+    transition: 0.2s;
 }
 
-#btn-red {
-    background-color: rgb(243, 151, 151);
+.active {opacity: 1;}
+
+.inactive {opacity: 0.5;}
+
+.game-btn:hover {
+    opacity: 1;
 }
 
-#btn-yellow {
-    background-color: rgb(228, 226, 131);
-}
+#btn-red {background-color: red;}
 
-#btn-green {
-    background-color: rgb(161, 247, 144);
-}
+#btn-yellow {background-color: yellow;}
 
-#btn-blue {
-    background-color: rgb(131, 138, 228);
-}
+#btn-green {background-color: green;}
 
+#btn-blue {background-color: blue;}
+
+#btn-red:hover, #btn-yellow:hover, #btn-green:hover, #btn-blue:hover {opacity: 1;}
 
 #game-result {
     display: flex;

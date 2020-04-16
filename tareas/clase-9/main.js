@@ -12,10 +12,12 @@ btnStart.onclick = function () {
 
     colorSequence.push(randomColor());
 
+    //oculta el menu de inicio
     document.getElementById('game-menu-block').style.visibility = 'hidden';
+
+    //Resalta brevemente el boton correspondiente al color asignado.
+    window.setTimeout(lightUpColor, 1150, colorSequence); 
 }
-
-
 
 
 function randomColor() {
@@ -24,18 +26,32 @@ function randomColor() {
 
     switch (rng) {
         case 1:
-            randomColor = 'red';
+            randomColor = 'btn-red';
             break;
         case 2:
-            randomColor = 'yellow';
+            randomColor = 'btn-yellow';
             break;
         case 3:
-            randomColor = 'green';
+            randomColor = 'btn-green';
             break;
         case 4:
-            randomColor = 'blue';
+            randomColor = 'btn-blue';
             break;
     }
 
     return randomColor;
+}
+
+function lightUpColor(colorSequence) {
+    //console.log(colorSequence);
+    colorSequence.forEach(color => {
+        //console.log(document.getElementById(color));
+        document.getElementById(color).classList.add('active');
+        window.setTimeout(lightDownColor, 800, color);
+    });
+}
+
+function lightDownColor(color) {
+    document.getElementById(color).classList.remove('active');
+    document.getElementById(color).classList.add('inactive');
 }
