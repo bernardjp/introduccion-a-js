@@ -12,14 +12,14 @@
         <button id="btn-start">START</button>
     </div>
 
-    <div id="game-btn-block" class="">
-        <button id="btn-red" class="game-btn"></button>
-        <button id="btn-yellow" class="game-btn"></button>
-        <button id="btn-green" class="game-btn"></button>
-        <button id="btn-blue" class="game-btn"></button>
+    <div class="game-btn-block">
+        <button id="btn-red" class="game-btn" onclick="colorVerification(this)"></button>
+        <button id="btn-yellow" class="game-btn" onclick="colorVerification(this)"></button>
+        <button id="btn-green" class="game-btn" onclick="colorVerification(this)"></button>
+        <button id="btn-blue" class="game-btn" onclick="colorVerification(this)"></button>
     </div>
 
-    <div id="game-result" class="hidden">
+    <div class="game-result hidden">
         <h2 id="game-result-msg">Your final score is:</h2>
         <h1 id="game-result-score">SCORE</h1>
         <button id="btn-reset">PLAY AGAIN</button>
