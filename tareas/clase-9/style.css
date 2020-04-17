@@ -5,7 +5,7 @@
 }
 
 
-#game-btn-block {
+.game-btn-block {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
@@ -27,9 +27,11 @@
 
 .inactive {opacity: 0.5;}
 
+/*
 .game-btn:hover {
     opacity: 1;
 }
+*/
 
 #btn-red {background-color: red;}
 
@@ -41,7 +43,7 @@
 
 #btn-red:hover, #btn-yellow:hover, #btn-green:hover, #btn-blue:hover {opacity: 1;}
 
-#game-result {
+.game-result {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -52,6 +54,7 @@
     width: 120px;
     height: 40px;
     font-size: 15px;
+    margin-top: 20px;
 }
 
 .hidden {
