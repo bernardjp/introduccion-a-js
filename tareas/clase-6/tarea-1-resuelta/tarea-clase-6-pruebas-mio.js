@@ -32,12 +32,12 @@ function pruebaValidarFormEdades() {
     )
 
     console.assert(
-        validarEdades(3.5) === 'Este campo solo acepta números por debajo de 130.',
+        validarEdades(3.5) === 'Este campo sola aceptan números enteros.',
         'La función validarEdades no validó que el input conste de números enteros.'
     )
 
     console.assert(
-        validarEdades(5232) === 'Este campo sola aceptan números enteros.',
+        validarEdades(5232) === 'Este campo solo acepta números por debajo de 130.',
         'La función validarEdades no validó que el input conste de números por debajo de 130.'
     )
 

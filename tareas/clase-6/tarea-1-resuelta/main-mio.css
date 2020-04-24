@@ -1,11 +1,30 @@
+/* Se utiliza la clase .d-none de bootstrap
 .oculto {
     display: none;
+}*/
+
+#siguiente-paso {
+    margin-left: 10px;
 }
 
 .input-error {
     border:  2px solid red;
 }
+/*
+.input-edad {
+    margin-left: 10px;
+    margin-right: 7px;
+}*/
 
 .mensaje-error {
     color: red;
+}
+
+#analisis, #input-integrantes {
+    width: auto;
+}
+
+
+h2, h6 {
+    max-width: 75%;
 }
