@@ -36,6 +36,8 @@ function validarFormulario(event) {
     const esExito = manejarErrores(errores) === 0;
 
     if (esExito) {
+        document.getElementById('ingreso-salarios').classList.add('was-validated');
+        
         calcularSalario();
         mostrarResultados(); 
     }
@@ -55,7 +57,9 @@ function manejarErrores(errores) {
 
         if (error) {
             cantidadErrores++;
-            document.getElementById(`salario-anual-${key}`).classList.add('error');
+            //agregar estilos al los inputs
+            document.getElementById('ingreso-salarios').classList.remove('was-validated');
+            document.getElementById(`salario-anual-${key}`).classList.add('is-invalid');
 
             if (document.querySelector(`#error-${key}`)) {
                 document.querySelector(`#error-${key}`).remove();
@@ -63,11 +67,13 @@ function manejarErrores(errores) {
 
             const $mensajeError = document.createElement('label');
                 $mensajeError.id = `error-${key}`;
-                $mensajeError.className = 'mensaje-error';
-                $mensajeError.innerText = `${error}`;
+                $mensajeError.classList = 'mensaje-error col-form-label font-weight-light';
+                $mensajeError.innerText = `* ${error}`;
             document.getElementById(`${key}`).appendChild($mensajeError);
         } else {
-            document.getElementById(`salario-anual-${key}`).classList.remove('error');
+            //document.getElementById('ingreso-salarios').classList.add('was-validated');
+            document.getElementById(`salario-anual-${key}`).classList.remove('is-invalid');
+            document.getElementById(`salario-anual-${key}`).classList.add('is-valid');
 
             if (document.querySelector(`#error-${key}`)) {
                 document.querySelector(`#error-${key}`).remove();
@@ -81,14 +87,14 @@ function manejarErrores(errores) {
 
 function validarSalario(salario) {
     if (salario === ''){
-        return '';
+        return 'Campo sin completar.';
     }
 
     if (/^[0-9]+$/.test(salario) === false) {
         return 'Este campo solamente acepta números.';
     }
 
-    if (salario < 0) {
+    if (salario <= 0) {
         return 'Este campo solamente acepta valores positivos.';
     }
 
@@ -126,19 +132,22 @@ function contador(numero){
 
 function crearIntegrante() {
     const $div = document.createElement('div');
-        $div.className = 'integrante';
+        $div.classList = 'integrante form-group row';
         $div.id = `${idIntegrante}`;
 
     const $label = document.createElement('label');
+        $label.htmlFor = `salario-anual-${idIntegrante}`;
+        $label.classList = 'col-sm-3 col-form-label';
         $label.textContent = `Integrante familiar #${idIntegrante}: `;
     const $input = document.createElement('input');
-        $input.className = 'salario-anual';
+        $input.classList = 'salario-anual form-control col-sm-3';
         $input.id = `salario-anual-${idIntegrante}`;
         $input.placeholder = 'Ingrese salario anual';
     const $button = document.createElement('button');
-        $button.className = 'boton-remover';
+        $button.classList = 'boton-remover bnt btn-danger btn-sm mt-2';
+        $button.style = 'width: 25px; height: 25px; padding: initial';
         $button.id = `boton-remover-${idIntegrante}`;
-        $button.textContent = 'Remover';
+        $button.textContent = 'X';
 
     $div.appendChild($label);
     $div.appendChild($input);
@@ -164,10 +173,10 @@ function removerIntegrante(numero){
 
 function calcularSalario(){
     const listado = obtenerListadoSalarios();
-    document.querySelector('#salario-mayor').textContent = numeroMayor(listado);
-    document.querySelector('#salario-menor').textContent = numeroMenor(listado);
-    document.querySelector('#salario-promedio').textContent = promedio(listado);
-    document.querySelector('#salario-promedio-mes').textContent = promedioEn12(listado);
+    document.querySelector('#salario-mayor').textContent = `$${numeroMayor(listado)}`;
+    document.querySelector('#salario-menor').textContent = `$${numeroMenor(listado)}`;
+    document.querySelector('#salario-promedio').textContent = `$${promedio(listado)}`;
+    document.querySelector('#salario-promedio-mes').textContent = `$${promedioEn12(listado)}`;
 }
 
 function obtenerListadoSalarios(){
@@ -183,17 +192,23 @@ function obtenerListadoSalarios(){
 }
 
 function mostrarResultados(){
-    document.querySelector('#resultados').className = '';
+    document.querySelector('#resultados').classList.remove('d-none');
 }
 
 
 function resetear(){
     borrarIntegrantesTodos();
     ocultarResultados();
+    resetearValidacionSalarios();
 }
 
 function ocultarResultados(){
-    document.querySelector('#resultados').className = 'oculto';
+    document.querySelector('#resultados').classList.add('d-none');
+}
+
+function resetearValidacionSalarios(){
+    document.getElementById('ingreso-salarios').classList.remove('was-validated');
+    document.getElementById('ingreso-salarios').classList.remove('form-control:valid');
 }
 
 function borrarIntegrantesTodos(){
@@ -201,6 +216,5 @@ function borrarIntegrantesTodos(){
     for(let i=0; i < $integrantesTodos.length; i++){
         $integrantesTodos[i].remove();
     }
-
     return idIntegrante = 0;
 }
