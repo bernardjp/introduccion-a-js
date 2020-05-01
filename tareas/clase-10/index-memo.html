@@ -4,11 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="memotest.css">
-    <link rel="stylesheet" href="../../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>Memotest</title>
 </head>
 <body>
-
+<div class="container"> <!--Cambiar los div por tablas-->
+    <div class="row">
+        <button id="boton-start" class="btn btn-primary col-sm">START</button>
+        <!--<button id="btn-reset" class="btn btn-primary col-sm">RESET</button>-->
+    </div>
+    <hr>
+    <table class="table table-sm table-bordered">
+        <tbody id="gaming-board"> 
+            <tr id="fila-1" class="row">
+                <td class="col-sm">
+                    <button id="0" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="1" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="2" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="3" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+            </tr>
+            <tr id="fila-2" class="row">
+                <td class="col-sm">
+                    <button id="4" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="5" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="6" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="7" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+            </tr>
+            <tr id="fila-3" class="row">
+                <td class="col-sm">
+                    <button id="8" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="9" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="10" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="11" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+            </tr>
+            <tr id="fila-4" class="row">
+                <td class="col-sm">
+                    <button id="12" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="13" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="14" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+                <td class="col-sm">
+                    <button id="15" class="boton-juego btn btn-sm btn-light" disabled></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="winning-screen" class="d-none">
+        <h2 class="display-4 col"><strong>Ganaste! </strong><strong id="score"></strong></h2>
+        <h2 class="display-5 col">Intenta otra vez.</h2>
+    </div>
+</div>
 <script src="memotest.js"></script>
 </body>
 </html>
