@@ -150,3 +150,4 @@ function shuffleArray (array){
 //Comenzar juego mezcla el array original -> Click en dos botones -> les cambia el background color al asignado aleatoriamente con anterioridad ->
 //si coinciden ambos botones quedan "encendidos" -> si no coinciden ambos botones vuelven a su color
 //original -> Cuando todos los botones fueron "encendidos" se reinicia el juego.
+
