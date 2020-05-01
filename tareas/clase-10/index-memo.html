@@ -9,123 +9,75 @@
 </head>
 <body>
 <div class="container"> <!--Cambiar los div por tablas-->
+    <div class="row">
+        <button id="boton-start" class="btn btn-primary col-sm">START</button>
+        <!--<button id="btn-reset" class="btn btn-primary col-sm">RESET</button>-->
+    </div>
+    <hr>
     <table class="table table-sm table-bordered">
-        <tbody>
-            <tr id="fila-1" class="row" style="height: 22%;">
+        <tbody id="gaming-board"> 
+            <tr id="fila-1" class="row">
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton1</button>
+                    <button id="0" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton2</button>
+                    <button id="1" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton3</button>
+                    <button id="2" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton4</button>
+                    <button id="3" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
             </tr>
             <tr id="fila-2" class="row">
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton1</button>
+                    <button id="4" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton2</button>
+                    <button id="5" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton3</button>
+                    <button id="6" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton4</button>
+                    <button id="7" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
             </tr>
             <tr id="fila-3" class="row">
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton1</button>
+                    <button id="8" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton2</button>
+                    <button id="9" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton3</button>
+                    <button id="10" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton4</button>
+                    <button id="11" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
             </tr>
             <tr id="fila-4" class="row">
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton1</button>
+                    <button id="12" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton2</button>
+                    <button id="13" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton3</button>
+                    <button id="14" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
                 <td class="col-sm">
-                    <button class="btn btn-sm btn-light">boton4</button>
+                    <button id="15" class="boton-juego btn btn-sm btn-light" disabled></button>
                 </td>
             </tr>
         </tbody>
-    <!--    CODIGO ORIGINAL
-        <div id="fila-1" class="row no-gutters">
-            <div class="col-sm">
-                <button class="btn btn-primary">boton1</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-success">boton2</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-warning">boton3</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-danger">boton4</button>
-            </div>
-        </div>
-        <div id="fila-2" class="row no-gutters">
-            <div class="col-sm">
-                <button class="btn btn-primary">boton1</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-success">boton2</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-warning">boton3</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-danger">boton4</button>
-            </div>
-        </div>
-        <div id="fila-3" class="row no-gutters">
-            <div class="col-sm">
-                <button class="btn btn-primary">boton1</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-success">boton2</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-warning">boton3</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-danger">boton4</button>
-            </div>
-        </div>
-        <div id="fila-4" class="row no-gutters">
-            <div class="col-sm">
-                <button class="btn btn-primary">boton1</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-success">boton2</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-warning">boton3</button>
-            </div>
-            <div class="col-sm">
-                <button class="btn btn-danger">boton4</button>
-            </div>
-        </div> -->
     </table>
+    <div id="winning-screen" class="d-none">
+        <h2 class="display-4 col"><strong>Ganaste! </strong><strong id="score"></strong></h2>
+        <h2 class="display-5 col">Intenta otra vez.</h2>
+    </div>
 </div>
 
 <script src="memotest.js"></script>
