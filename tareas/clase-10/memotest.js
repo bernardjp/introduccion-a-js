@@ -20,7 +20,7 @@ const $botonesJuego = document.querySelectorAll('.boton-juego');
 
 
 $botonStart.onclick = function startGame(event){
-    console.log(shuffleArray(arrayColoresCompleto));
+    shuffleArray(arrayColoresCompleto);
     setUpBoard();
     
     event.preventDefault();
@@ -35,8 +35,7 @@ $botonesJuego.forEach(function($boton){
 
 function inputUsuario(event){
     turnOnBoton(event);
-    let comparisonResult = compareInputs(event);
-    errorHandler(comparisonResult);
+    errorHandler(compareInputs(event));
 
     if(successCounter === 8){
         winningScreen(successCounter, errorCounter);
@@ -54,7 +53,8 @@ function errorHandler(result){
 
     if (result === 1) {
         $inputsToCompare.forEach(input => {
-            setTimeout(function(){input.className = 'boton-juego btn btn-sm btn-light';}, 1200);
+            //setTimeout(function(){input.className = 'boton-juego btn btn-sm btn-light';}, 1200);
+            setTimeout(function(){input.style.opacity = 0;}, 1200);
         })
         $inputsToCompare = [];
         errorCounter++;
@@ -62,7 +62,9 @@ function errorHandler(result){
 
     if (result === 2) {
         $inputsToCompare.forEach(input => {
-            setTimeout(function(){input.disabled = true;}, 1200);
+            setTimeout(function(){
+                input.disabled = true;
+                input.style.opacity = 0.5;}, 1200);
         })
         $inputsToCompare = [];
         successCounter++;
@@ -72,22 +74,19 @@ function errorHandler(result){
 //Compara los resultados de 2 inputs distintos.
 function compareInputs(event){
     let $boton = event.target;
-    //console.log($boton);
     $inputsToCompare.push($boton)
-    //console.log($inputsToCompare);
     let result = 0;
 
     if ($inputsToCompare.length === 2){
-        //disableInput();s
         if ($inputsToCompare[0].id === $inputsToCompare[1].id){
             result = 1;
-            console.log('clickeaste el mismo boton!');
+            //console.log('clickeaste el mismo boton!');
         } else if($inputsToCompare[0].className !== $inputsToCompare[1].className){
             result = 1;
-            console.log('son distintos!');
+            //console.log('son distintos!');
         } else {
             result = 2;
-            console.log('son iguales!');
+            //console.log('son iguales!');
         }
     }
     return result;
@@ -97,8 +96,13 @@ function compareInputs(event){
 function turnOnBoton(event){
     const $boton = event.target;
     console.log($boton);
+
+    $boton.style.opacity = 1;
+
+    /*
     $boton.classList.remove('btn-light');
     $boton.classList.add(`${arrayColoresCompleto[$boton.id]}`);
+    */
 }
 
 //Para bloquear el input del usuario en un boton se le asigna una funcion vacia.
@@ -111,10 +115,14 @@ function disableUserInput() {
 }
 
 function setUpBoard(){
-    $botonesJuegoOg = document.querySelectorAll('.boton-juego');
+    errorCounter = 0;
+    successCounter = 0;
 
+    $botonesJuegoOg = document.querySelectorAll('.boton-juego');
     $botonesJuegoOg.forEach(boton => {
-        boton.classList = 'boton-juego btn btn-sm btn-light';
+        //boton.classList = 'boton-juego btn btn-sm btn-light';
+        boton.classList = `boton-juego btn btn-sm ${arrayColoresCompleto[boton.id]}`;
+        boton.style.opacity = 0;
         boton.disabled = false;
     });
 
