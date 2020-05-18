@@ -5,8 +5,8 @@ html, body {
 }
 
 button {
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
 .container {
@@ -16,7 +16,8 @@ button {
 
 table.table-bordered > tbody > tr > td {
     border:1px solid rgb(112, 112, 194);
-    height: 120px;
+    height: 20vh;
+    width: 20vh;
 }
 
 /*
