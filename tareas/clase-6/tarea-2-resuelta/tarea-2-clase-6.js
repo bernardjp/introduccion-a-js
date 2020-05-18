@@ -25,6 +25,10 @@ function validarFormulario(event) {
     const salarios = [];
     const errores = {};
 
+    if ($form.length === 0){
+        return;
+    }
+
     $form.forEach(function(input){
         salarios.push(input.value);
     });
