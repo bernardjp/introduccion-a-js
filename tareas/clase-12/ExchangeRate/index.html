@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exchangeRateStyles.css">
+    <title>Exchange Rates</title>
+</head>
+<body>
+    <h1 id="title">Titulo</h1>
+    <p id="explanation">Lorem ipsum dolor sit</p>
+    
+    <div id="inputs">
+            <!-- 
+                1- "Select" para elegir la moneda base. Default = EUR.
+                2- "Select Date" para elegir la fecha: en DD/MM/AA. Default = dia de la fecha.
+                3- "Button" para aceptar los filtros.
+            --> 
+        <form action="">
+            <select name="currency" id="input-currency">
+            <!--<option value="currency-1" selected>EUR</option>
+                <option value="currency-2">USD</option>
+                <option value="currency-4">ARG</option>-->
+            </select>
+            <input type="date" id="input-date" value="" min="" max="">
+            <button id="apply-filters">ACEPTAR</button>
+            <button id="reset-filters">REINICIAR</button>
+        </form>
+    </div>
+
+    <div id="results">
+        <!-- 
+            Fila 1: Nombre divisa // Valor divisa (segun Fecha).
+            Fila n: Segun API.
+        -->
+    </div>
+
+    <script src="exchangeRateMain.js"></script>
+    <script src="exchangeRateCalc.js"></script>
+</body>
+</html>
