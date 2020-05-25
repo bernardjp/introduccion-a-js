@@ -27,12 +27,17 @@
             <button id="reset-filters">REINICIAR</button>
         </form>
     </div>
-
-    <div id="results">
-        <!-- 
-            Fila 1: Nombre divisa // Valor divisa (segun Fecha).
-            Fila n: Segun API.
-        -->
+    <div id="table-container" class="hidden">
+        <table id="table-result">
+            <thead id="table-header">
+                <tr>
+                    <th>CURRENCY</th>
+                    <th>RATE</th>
+                </tr>
+            </thead>
+            <tbody id="table-rates">
+            </tbody>
+        </table>
     </div>
 
     <script src="exchangeRateMain.js"></script>
