@@ -1,4 +1,75 @@
 
-.hidden{
+.hidden {
     display: none;
+}
+
+.h-line {
+    width: 100%;
+    border:  1px solid rgb(83, 153, 153);
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: rgb(83, 153, 153);
+    color: white;
+    font-size: 14px;
+    padding: 2px 24px;
+    border-radius: 4px;
+}
+
+#flex-container {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+
+#inputs {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    background-color: #bddcbd;
+}
+
+#input-currency {
+    border: 1px solid gray;
+    padding-right: 10px;
+    margin-right: 25px;
+    border-radius: 3px;
+}
+
+#input-date {
+    border: 1px solid gray;
+    padding-top: 4px;
+    margin-right: 25px;
+    border-radius: 3px;
+}
+
+#table-title {
+    width: 100%;
+}
+
+#table-result {
+    border-collapse: collapse;
+    font-size: small;
+}
+
+#table-result th, #table-result td {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 5px 32px;
+}
+
+#table-rates tr:hover {
+    background-color: rgb(190, 190, 190);
+}
+
+#table-header {
+    background-color: rgb(83, 153, 153);
+    color: white;
+    border-radius: 4px;
 }

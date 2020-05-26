@@ -7,39 +7,41 @@
     <title>Exchange Rates</title>
 </head>
 <body>
-    <h1 id="title">Titulo</h1>
-    <p id="explanation">Lorem ipsum dolor sit</p>
-    
-    <div id="inputs">
-            <!-- 
-                1- "Select" para elegir la moneda base. Default = EUR.
-                2- "Select Date" para elegir la fecha: en DD/MM/AA. Default = dia de la fecha.
-                3- "Button" para aceptar los filtros.
-            --> 
-        <form action="">
-            <select name="currency" id="input-currency">
-            <!--<option value="currency-1" selected>EUR</option>
-                <option value="currency-2">USD</option>
-                <option value="currency-4">ARG</option>-->
-            </select>
-            <input type="date" id="input-date" value="" min="" max="">
-            <button id="apply-filters">ACEPTAR</button>
-            <button id="reset-filters">REINICIAR</button>
-        </form>
+    <div id="flex-container">
+        <h1 id="title">Exchange rate calculator.</h1>
+        <hr class="h-line">
+        <p id="explanation">This simple application let you obtain the exchange value between some of the most
+            common currencies around the world in any given day down to January 4th, 1999.<br>
+            Select the base currency and the date from which you want the information and click "Apply". 
+        </p>
+        
+        <div id="inputs">
+            <form action="">
+                <label for="currency">Base currency: </label>
+                <select name="currency" id="input-currency">
+                </select>
+                <label for="date">Date: </label>
+                <input type="date" id="input-date" value="" min="" max="">
+                <button id="apply-filters">Apply</button>
+                <button id="reset-filters">Reset</button>
+            </form>
+        </div>
+        <!-- <p id="table-title"></p> -->
+        <div id="table-container" class="hidden">
+            <p id="table-title">Base Currency: <strong id="base-currency"></strong><br>
+                Date: <strong id="date"></strong></p>
+            <table id="table-result">
+                <thead id="table-header">
+                    <tr>
+                        <th>Currency</th>
+                        <th>Rates</th>
+                    </tr>
+                </thead>
+                <tbody id="table-rates">
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div id="table-container" class="hidden">
-        <table id="table-result">
-            <thead id="table-header">
-                <tr>
-                    <th>CURRENCY</th>
-                    <th>RATE</th>
-                </tr>
-            </thead>
-            <tbody id="table-rates">
-            </tbody>
-        </table>
-    </div>
-
     <script src="exchangeRateMain.js"></script>
     <script src="exchangeRateCalc.js"></script>
 </body>
