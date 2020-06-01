@@ -39,7 +39,7 @@ function apiResponseHandler(currency, date){
     fetch(`https://api.exchangeratesapi.io/${date}?base=${currency}`)
         .then(response => response.json())
         .then(response => createDisplay(response))
-        .catch(error => {console.error('Fallo:', error)})
+        .catch(error => apiErrorMessage(error))
 };
 
 function createDisplay(apiResponse){
@@ -69,6 +69,12 @@ function createDisplay(apiResponse){
     })
 };
 
+function apiErrorMessage(error) {
+    console.error('Fallo:', error);
+    document.querySelector('#error-message').classList.remove('hidden');
+    document.querySelector('#error-message').innerText = 'Failed to fetch API data. Try again later.';
+}
+
 function resetDisplay(){   
     document.getElementById('table-container').classList.add('hidden');
     document.getElementById('table-rates').innerHTML = '';
@@ -85,7 +91,7 @@ fetch('https://api.exchangeratesapi.io/latest')
         defaultBaseCurrency(currencyBase);
         defaultListCurrency(currencyRatesList);
     })
-    .catch(error => console.error('Fallo', error))
+    .catch(error => apiErrorMessage(error))
 
 function defaultBaseCurrency(currency){
     const $option= document.createElement('option');
