@@ -1,0 +1,173 @@
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100%;
+    margin: 0px;
+    font-family: Lato,sans-serif;
+    font-size: 14px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: inherit;
+    justify-content: center;
+}
+
+#flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+/************************************************/
+
+#header-wrapper {
+    height: 3.5em;
+    background-color: #e15b54;
+}
+
+#site-header {
+    display: flex;
+    width: 75em;
+    height: inherit;
+    justify-content: space-between;
+}
+
+#pokedex-logo {
+    padding-left: 1.25em;
+}
+
+#site-header-nav {
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+
+#site-header-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+#site-header-nav div {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1em;
+}
+
+#site-header-nav div:hover {
+    background-color: #ca4c45;
+}
+
+/************************************************/
+
+#content-wrapper {
+    background-color: #cbcde6;
+}
+
+#site-content {
+    display: flex;
+    width: 75em;
+    background-color: white;
+}
+
+/************************************************/
+
+#sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    padding: 0 2rem;
+    color: rgb(43, 92, 133);
+    /*border: solid red 2px;*/
+}
+
+#sidebar-wrapper h2 {
+    margin-block-start: 1.75rem;
+    margin-block-end: 0.5rem;
+}
+
+#sidebar-wrapper ul {
+    list-style: none;
+    margin-block-start: 0rem;
+    padding: 0rem;
+}
+
+#sidebar-wrapper ul li {
+    padding: .17em 0;
+}
+
+#sidebar-wrapper ul li:hover{
+    font-weight: 600;
+}
+
+#pagination {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+#pagination a {
+    text-decoration: none;
+    color: rgb(77, 122, 158);
+}
+
+#pagination a:hover {
+    font-weight: 600;
+}
+
+/************************************************/
+
+#main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+    color: rgb(43, 92, 133);
+    background-color: rgb(243, 243, 243);
+    /*border: solid green 2px;*/
+}
+
+#title-wrapper {
+    padding: 1rem 0;
+}
+
+#section-excerpt {
+    font-style: italic;
+}
+
+#card-wrapper {
+    display: flex;
+    border: solid red 2px;
+}
+
+#card-data {
+    display: flex;
+    flex-basis: 45%;
+    border: solid lawngreen 2px;
+}
+
+#card-picture {
+    display: flex;
+    flex-basis: 55%;
+    justify-content: center;
+    align-items: center;
+    border: solid blue 2px;
+}
+
+/************************************************/
+
+#footer-wrapper {
+    display: flex;
+    font-size: small;
+    height: 3.5em;
+    /*background-color: rgb(100, 100, 100);*/
+    /*align-items: center;*/
+    /*padding-top: .45rem;*/
+}
+
