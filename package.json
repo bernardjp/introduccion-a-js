@@ -10,7 +10,10 @@
     "bootstrap": "^4.4.1"
   },
   "devDependencies": {
-    "cypress": "^4.7.0"
+    "cypress": "^4.7.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
