@@ -1,103 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Pokédex</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Pokédex</title>
 </head>
 <body>
-    <div id="flex-wrapper">
-        <div id="header-wrapper" class="wrapper">
-            <header id="site-header">
-                <a id="pokedex-logo" title="pokedex-title" href="index.html">
-                    <img src="./img/pokemon_logo.png" alt="pokedex-logo" height="46px">
-                </a>
-                <nav id="site-header-nav">
-                    <div><a href="index.html">Home</a></div>
-                    <div><a href="*">About</a></div>
-                    <div><a href="*">Contact</a></div>
-                </nav>
-            </header>
-        </div>
-
-        <main id="content-wrapper" class="wrapper">
-            <div id="site-content">    
-                <nav id="sidebar-wrapper">
-                    <div id="sidebar-title">
-                        <h2>The Pokélist</h2>
-                        <select name="resources" id="api-resources">
-                            <option value="pokemon">Pokémon</option>
-                            <option value="item">Items</option>
-                            <option value="berry">Berries</option>
-                            <option value="move">Moves</option>
-                            <option value="" disabled selected hidden>Choose a resource!</option>
-                        </select>
-                        <nav id="pagination">
-                            <div><a href="" id="prev-pagination-nav" class="sidebar-nav hidden" data-url="">&lt;Prev</a></div>
-                            <form id="page-index">
-                                <input id="current-index-input" type="number" min="1" max="">
-                                <p id="total-index" style="margin:0px"></p>
-                            </form> 
-                            <div><a href="" id="next-pagination-nav" class="sidebar-nav hidden" data-url="">Next&gt;</a></div>
-                        </nav>
-                        <hr class="line hidden">
-                    </div>
-                    <ul id="resources-list">
-                    </ul>
-                  
-                </nav>
-
-                <div id="main-content-wrapper">
-                    <div id="title-wrapper">
-                        <h1 id="section-title">Welcome to the PokéDex</h1>
-                        <p id="section-excerpt">"To make a complete guide on all the Pokémon in the world… 
-                            That was my dream! But, I'm too old! I can't do it! So, I want you to 
-                            fulfill my dream for me! Get moving! This is a great undertaking in 
-                            Pokémon history!"  <strong>-- Professor Oak</strong>
-                        </p>
-                        <p>
-                            
-                        </p>
-                    </div>
-                    <div id="card-wrapper">
-                        <div id="card-data">
-                            <ul id="card-properties">
-                                <li>Name:</li>
-                                <li>Poké-ID:</li>
-                                <li>Type:</li>
-                                <li>First Appereance:</li>
-                                <li>Height:</li>
-                                <li>Weight:</li>
-                                <li>Evolve Chain:</li>
-                                <hr>
-                                <p>Combat Stats</p>
-                                <li>Hit Points:</li>
-                                <li>Attack:</li>
-                                <li>Defense:</li>
-                                <li>Special Attack:</li>
-                                <li>Special Defense:</li>
-                                <li>Speed:</li>
-                                <hr>
-                                <p>Abilities</p>
-                                <li>Ability A:</li>
-                                <li>Ability B:</li>
-                            </ul>
-                        </div>
-                        <div id="card-picture">
-                            <img src="" alt="pokemon-picture">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <footer id="footer-wrapper" class="wrapper">
-            <div>
-                <p>Shoutout to <a href="https://pokeapi.co/">PokeApi</a> and <a href="https://argentinaprograma.com/">r/argentinaPrograma</a></p>
-            </div>
-        </footer>
+  <div id="flex-wrapper">
+    <div id="header-wrapper" class="wrapper">
+      <header id="site-header">
+        <a id="pokedex-logo" title="pokedex-title" href="index.html">
+          <img src="./img/pokemon_logo.png" alt="pokedex-logo" height="46px">
+        </a>
+        <nav id="site-header-nav">
+          <div><p id="home-btn">Home</p></div>
+          <div><p id="about-btn">About</p></div>
+          <div><p id="contact-btn">Contact</p></div>
+          <!-- <div><a id="home-btn" href="index.html">Home</a></div>
+          <div><a id="about-btn" href="">About</a></div>
+          <div><a id="contact-btn" href="">Contact</a></div> -->
+        </nav>
+      </header>
     </div>
-    <script src="./src/app/index.js" type="module"></script>    
+    <main id="content-wrapper" class="wrapper">
+      <div id="site-content">    
+        <nav id="sidebar-wrapper">
+          <div id="sidebar-title">
+            <h2>The Pokélist</h2>
+            <select name="resources" id="api-resources">
+              <option class="option" value="pokemon">Pokémon</option>
+              <option class="option" value="item">Items</option>
+              <option class="option" value="berry">Berries</option>
+              <option class="option" value="move">Moves</option>
+              <option value="" disabled selected hidden>Choose a resource!</option>
+            </select>
+            <nav id="pagination">
+              <div><a href="" id="prev-pagination-nav" class="sidebar-nav hidden" data-url="">&lt;Prev</a></div>
+              <form id="page-index">
+                <input id="current-index-input" type="number" min="1" max="">
+                <p id="total-index" style="margin:0px"></p>
+              </form> 
+              <div><a href="" id="next-pagination-nav" class="sidebar-nav hidden" data-url="">Next&gt;</a></div>
+            </nav>
+            <hr class="line hidden">
+          </div>
+          <ul id="resources-list">
+          </ul>
+        </nav>
+        
+        <div id="main-content-wrapper">
+          <div id="article-wrapper">
+            <h1 id="article-title"></h1>
+            <p id="article-excerpt"></p>
+            <p>
+            </p>
+          </div>
+          <div id="card-wrapper">
+            <div id="card-data">
+              <ul id="card-properties">
+              </ul>
+            </div>
+            <div id="card-picture">
+              <img class="img hidden" src="" alt="picture" width="100%">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer id="footer-wrapper" class="wrapper">
+      <div>
+        <p>Shoutout to <a href="https://pokeapi.co/">PokeApi</a> and <a href="https://argentinaprograma.com/">r/argentinaPrograma</a></p>
+      </div>
+    </footer>
+  </div>
+  <script src="./index.js" type="module"></script>    
 </body>
 </html>
