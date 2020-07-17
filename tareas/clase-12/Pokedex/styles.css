@@ -1,218 +1,219 @@
 html {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 body {
-    width: 100%;
-    margin: 0px;
-    font-family: Lato,sans-serif;
-    font-size: 14px;
+  width: 100%;
+  margin: 0px;
+  font-family: Lato,sans-serif;
+  font-size: 14px;
 }
 
 .wrapper {
-    display: flex;
-    width: 100%;
-    height: inherit;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  height: inherit;
+  justify-content: center;
 }
 
 #flex-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
 }
 
 .hidden {
-    visibility: hidden;
-    /* display: none; */
+  visibility: hidden;
+  /* display: none; */
 }
 
 /************************************************/
 
 #header-wrapper {
-    height: 3.5em;
-    background-color: #e15b54;
+  height: 3.5em;
+  background-color: #e15b54;
 }
 
 #site-header {
-    display: flex;
-    width: 75em;
-    height: inherit;
-    justify-content: space-between;
+  display: flex;
+  width: 75em;
+  height: inherit;
+  justify-content: space-between;
 }
 
 #pokedex-logo {
-    padding-left: 1.25em;
+  padding-left: 1.25em;
 }
 
 #site-header-nav {
-    display: flex;
-    height: inherit;
-    align-items: center;
+  display: flex;
+  height: inherit;
+  align-items: center;
 }
 
-#site-header-nav a {
-    color: white;
-    text-decoration: none;
+#site-header-nav p {
+  color: white;
+  text-decoration: none;
 }
 
 #site-header-nav div {
-    display: flex;
-    height: inherit;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1em;
+  display: flex;
+  cursor: pointer;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1em;
 }
 
 #site-header-nav div:hover {
-    background-color: #ca4c45;
+  background-color: #ca4c45;
 }
 
 /************************************************/
 
 #content-wrapper {
-    background-color: #cbcde6;
+  background-color: #cbcde6;
 }
 
 #site-content {
-    display: flex;
-    width: 75em;
-    background-color: white;
-    justify-content: space-between;
+  display: flex;
+  width: 75em;
+  background-color: white;
+  justify-content: space-between;
 }
 
 /************************************************/
 
 #sidebar-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    padding: 0 2rem;
-    color: rgb(43, 92, 133);
-    /*border: solid red 2px;*/
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 0 2rem;
+  color: rgb(43, 92, 133);
+  /*border: solid red 2px;*/
 }
 
 #sidebar-wrapper h2 {
-    font-size: 150%;
-    margin-block-start: 1.75rem;
-    margin-block-end: 0.5rem;
+  font-size: 150%;
+  margin-block-start: 1.75rem;
+  margin-block-end: 0.5rem;
 }
 
 #sidebar-wrapper select {
-    cursor: pointer;
-    width: 100%;
-    font-size: 1.1rem;
-    color: rgb(129, 140, 150);
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.1rem;
+  color: rgb(129, 140, 150);
 }
 
 #sidebar-wrapper ul {
-    list-style: none;
-    padding: 0rem;
-    margin: 0rem;
+  list-style: none;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 #sidebar-wrapper ul li {
-    font-size: 1.1rem;
-    padding: .17rem 0;
-    text-transform: capitalize;
+  font-size: 1.1rem;
+  padding: .17rem 0;
+  text-transform: capitalize;
 }
 
 #sidebar-wrapper ul li:hover{
-    cursor: pointer;
-    font-weight: 600;
-    background-color: rgb(234, 238, 241);
-    border-right: solid rgb(161, 161, 201) 4px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: rgb(234, 238, 241);
+  border-right: solid rgb(161, 161, 201) 4px;
 }
 
 #page-index {
-    display: inherit;
-    flex-direction: row;
+  display: inherit;
+  flex-direction: row;
 }
 
 input {
-    border: none;
-    width: 2.5rem;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
-    appearance: none;
-    margin: 0;
+  border: none;
+  width: 2.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  appearance: none;
+  margin: 0;
 }
 
 #pagination {
-    display: flex;
-    margin: .75rem 0;
-    justify-content: space-between;
-    font-size: 1.1rem;
+  display: flex;
+  margin: .75rem 0;
+  justify-content: space-between;
+  font-size: 1.1rem;
 }
 
 #pagination a {
-    text-decoration: none;
-    color: rgb(77, 122, 158);
+  text-decoration: none;
+  color: rgb(77, 122, 158);
 }
 
 #pagination a:hover {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 /************************************************/
 
 #main-content-wrapper {
-    display: flex;
-    width: 75%;
-    flex-direction: column;
-    padding: 0 2rem;
-    color: rgb(43, 92, 133);
-    background-color: rgb(243, 243, 243);
-    /*border: solid green 2px;*/
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  padding: 0 2rem;
+  color: rgb(43, 92, 133);
+  background-color: rgb(243, 243, 243);
+  /*border: solid green 2px;*/
 }
 
 #title-wrapper {
-    padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 #section-excerpt {
-    font-style: italic;
+  font-style: italic;
 }
 
 #card-wrapper {
-    display: flex;
-    border: solid red 2px;
+  display: flex;
+  /* border: solid red 2px; */
 }
 
 #card-data {
-    display: flex;
-    flex-basis: 45%;
-    border: solid lawngreen 2px;
+  display: flex;
+  flex-basis: 45%;
+  /* border: solid lawngreen 2px; */
 }
 
 #card-properties p {
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    margin-top: .75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: .75rem;
 }
 
 #card-properties {
-    list-style: none;
-    padding-inline-start: 2rem;
+  list-style: none;
+  padding-inline-start: 2rem;
 }
 
 #card-picture {
-    display: flex;
-    flex-basis: 55%;
-    justify-content: center;
-    align-items: center;
-    border: solid blue 2px;
+  display: flex;
+  flex-basis: 55%;
+  justify-content: center;
+  align-items: center;
+  /* border: solid blue 2px; */
 }
 
 /************************************************/
 
 #footer-wrapper {
-    display: flex;
-    font-size: small;
-    height: 3.5em;
-    /*background-color: rgb(100, 100, 100);*/
-    /*align-items: center;*/
-    /*padding-top: .45rem;*/
+  display: flex;
+  font-size: small;
+  height: 3.5em;
+  /*background-color: rgb(100, 100, 100);*/
+  /*align-items: center;*/
+  /*padding-top: .45rem;*/
 }
 
